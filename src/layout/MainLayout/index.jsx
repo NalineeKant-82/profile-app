@@ -1,16 +1,16 @@
 import { Box } from "@mui/material";
 import LandingPage from "../LandingPage";
-const MainLayout = () => {
+const MainLayout = ({ darkTheme }) => {
   return (
     <Box
       sx={{
-        height: "100%",
+        height: "calc(100% - 70px);",
         width: "100%",
         display: "flex",
         justifyContent: "center",
       }}
-    >   
-      <LandingPage />
+    >
+      <LandingPage darkTheme={darkTheme} />
     </Box>
   );
 };

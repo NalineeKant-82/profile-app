@@ -8,8 +8,22 @@ function App() {
   const theme = createTheme({
     palette: {
       mode: darkTheme ? "dark" : "light",
-      primary: {
-        main: "#0052cc",
+      // primary: {
+      //   main: "#0052cc",
+      // },
+      typography: {
+        fontFamily: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(","),
       },
     },
   });
@@ -22,8 +36,8 @@ function App() {
     <Box sx={{ height: "100vh", width: "100%" }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <CustomAppBar check={darkTheme} changeThemeColor={changeThemeColor} />
-        <MainLayout />
+        <CustomAppBar darkTheme={darkTheme} changeThemeColor={changeThemeColor} />
+        <MainLayout  darkTheme={darkTheme} />
       </ThemeProvider>
     </Box>
   );
